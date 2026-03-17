@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import movies from "../components/Movies"
+import { useState, useEffect } from "react";
+import movies from "../components/Movies";
 
 function App() {
   
@@ -12,21 +12,23 @@ function App() {
   
   return (
     <div>
-      <h1>Movies</h1>
-      <input
+      <div className="container">
+        <h1>Movies</h1>
+        <input
         type="text"
         placeholder="search"
         onChange={(e) => setSearch(e.target.value)}
-      />
+        />
 
 
-      <ul>
+        <ul>
         {filteredMovies.map((movie) => (
           <li>
             <h3>{movie.title}</h3>
           </li>
         ))}
-      </ul>
+        </ul>
+      </div>
     </div>
   );
 
